@@ -26,14 +26,27 @@ urlpatterns = [
     path("cars/<int:pk>/", CarDetailView.as_view(), name="car-detail"),
     path("drivers/", DriverListView.as_view(), name="driver-list"),
     path(
-        "drivers/<int:pk>/", DriverDetailView.as_view(), name="driver-detail"
+        "drivers/<int:pk>/",
+        DriverDetailView.as_view(),
+        name="driver-detail"
     ),
-    path("Manufacturer/create", ManufacturerCreateView.as_view(), name="manufacturer-create"),
-    path("car/create", CarCreateView.as_view(), name="car-create"),
-    path("car/<int:pk>/update/", CarUpdateView.as_view(), name="car-update"),
-    path("Manufacturer/<int:pk>/update/", ManufacturerUpdateView.as_view(), name="manufacturer-update"),
-    path("car/<int:pk>/delete/", CarDeleteView.as_view(), name="car-delete"),
-    path("Manufacturer/<int:pk>/delete/", ManufacturerDeleteView.as_view(), name="manufacturer-delete")
+    path("Manufacturer/create",
+         ManufacturerCreateView.as_view(),
+         name="manufacturer-create"),
+    path("car/create", CarCreateView.as_view(),
+         name="car-create"),
+    path("car/<int:pk>/update/",
+         CarUpdateView.as_view(),
+         name="car-update"),
+    path("Manufacturer/<int:pk>/update/",
+         ManufacturerUpdateView.as_view(),
+         name="manufacturer-update"),
+    path("car/<int:pk>/delete/",
+         CarDeleteView.as_view(),
+         name="car-delete"),
+    path("Manufacturer/<int:pk>/delete/",
+         ManufacturerDeleteView.as_view(),
+         name="manufacturer-delete")
 ]
 
 app_name = "taxi"
